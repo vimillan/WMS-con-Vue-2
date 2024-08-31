@@ -1,12 +1,15 @@
 <template>
     <div>
-        <div class="center-item gap-2 justify-content-between mb-3">
+        <div class="center-item gap-2 justify-content-between mb-1">
             <div class="fs-18">Productos</div>
             <button class="btn btn-success center rounded-xs hw-35" data-bs-toggle="modal"
                 data-bs-target="#mdlAddProduct">
                 <i class="bx bx-plus icon-md"></i>
             </button>
         </div>
+
+        <!-- Stats del almacén -->
+        <WarehouseStats :stats="stats" />
 
         <!-- Lista de Productos -->
         <ListProduct :productos="productosLista" @update-producto="updateProducto" />
@@ -73,11 +76,13 @@
 
 <script>
 import ListProduct from "./ListProduct.vue"
+import WarehouseStats from './WarehouseStats.vue';
 
 export default {
     name: "Products",
     components: {
         ListProduct,
+        WarehouseStats,
     },
     data() {
         return {
@@ -87,8 +92,20 @@ export default {
                 cantidad: 1
             },
             errors: {},
-            productosLista: []
+            productosLista: [],
+            stats: {
+                productos: 0,
+                almacen: 0
+            }
         };
+    },
+    watch: {
+        productosLista: {
+            handler() {
+                this.actualizarStats();
+            },
+            deep: true
+        }
     },
     methods: {
         validateForm() {
@@ -138,7 +155,23 @@ export default {
         },
         updateProducto({ index, cantidad }) {
             this.productosLista[index].cantidad = cantidad;
+        },
+        actualizarStats() {
+            const totalProductos = this.productosLista.length;
+            let totalAlmacen = 0;
+
+            for (let i = 0; i < this.productosLista.length; i++) {
+                totalAlmacen += this.productosLista[i].cantidad;
+            }
+
+            this.stats = {
+                productos: totalProductos,
+                almacen: totalAlmacen
+            };
         }
+    },
+    mounted() {
+        this.actualizarStats();
     }
 };
 </script>
