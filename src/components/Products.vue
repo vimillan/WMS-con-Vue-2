@@ -2,14 +2,14 @@
     <div>
         <div class="center-item gap-2 justify-content-between mb-3">
             <div class="fs-18">Productos</div>
-            <button class="btn btn-primary center rounded-xs hw-35" data-bs-toggle="modal"
+            <button class="btn btn-success center rounded-xs hw-35" data-bs-toggle="modal"
                 data-bs-target="#mdlAddProduct">
                 <i class="bx bx-plus icon-md"></i>
             </button>
         </div>
 
         <!-- Lista de Productos -->
-        <ListProduct :productos="productosLista" />
+        <ListProduct :productos="productosLista" @update-producto="updateProducto" />
 
         <!-- Agregar producto -->
         <div class="modal fade" id="mdlAddProduct" tabindex="-1" aria-labelledby="mdlAddProductLabel"
@@ -135,6 +135,9 @@ export default {
             if (closeMdl) {
                 closeMdl.click()
             }
+        },
+        updateProducto({ index, cantidad }) {
+            this.productosLista[index].cantidad = cantidad;
         }
     }
 };
