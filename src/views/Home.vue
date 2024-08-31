@@ -1,8 +1,9 @@
 <template>
     <div>
-        <Navbar/>
+        <Navbar />
         <div class="mt-4 container">
-            <Header/>
+            <Header />
+            <Products />
         </div>
     </div>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import Navbar from "../components/Navbar.vue";
 import Header from "../components/Header.vue";
+import Products from "../components/Products.vue"
 
 export default {
     name: "Home",
     components: {
         Navbar,
         Header,
+        Products,
     },
 };
 </script>
