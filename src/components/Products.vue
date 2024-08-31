@@ -9,11 +9,7 @@
         </div>
 
         <!-- Lista de Productos -->
-        <ul>
-            <li v-for="(producto, index) in productosLista" :key="index">
-                {{ producto.nombre }} - {{ producto.sku }} - {{ producto.cantidad }}
-            </li>
-        </ul>
+        <ListProduct :productos="productosLista" />
 
         <!-- Agregar producto -->
         <div class="modal fade" id="mdlAddProduct" tabindex="-1" aria-labelledby="mdlAddProductLabel"
@@ -76,8 +72,13 @@
 </template>
 
 <script>
+import ListProduct from "./ListProduct.vue"
+
 export default {
     name: "Products",
+    components: {
+        ListProduct,
+    },
     data() {
         return {
             producto: {
@@ -103,6 +104,8 @@ export default {
                 this.errors.sku = 'El SKU es obligatorio.';
             } else if (!/^[a-zA-Z0-9-_]+$/.test(this.producto.sku)) {
                 this.errors.sku = 'Sólo se permiten letras, números, guiones y guiones bajos.';
+            } else if (this.productosLista.some(p => p.nombre === this.producto.nombre)) {
+                this.errors.nombre = 'Este producto ya existe.';
             }
 
             if (this.producto.cantidad < 1) {
@@ -115,7 +118,7 @@ export default {
             if (this.validateForm()) {
                 this.productosLista.push({ ...this.producto });
                 this.resetForm();
-                this.closeModal();
+                //falta mensaje
             }
         },
         resetForm() {
