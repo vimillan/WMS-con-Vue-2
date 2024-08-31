@@ -1,0 +1,184 @@
+/* Border */
+.border-success {
+    border-color: #28a745 !important;
+}
+
+.border-danger {
+    border-color: #dc3545 !important;
+}
+
+.border-warning {
+    border-color: #FC9432 !important;
+}
+
+.border-primary {
+    border-color: #1071E5 !important;
+}
+
+.border-danger {
+    border-color: #c42424 !important;
+}
+
+.rounded-xl {
+    border-radius: 20px;
+}
+
+.rounded-lg {
+    border-radius: 15px;
+}
+
+.rounded-xs {
+    border-radius: 8px !important;
+}
+
+.rounded-tiny {
+    border-radius: 4px;
+}
+
+.bg-warning-alt {
+    background-color: #FC9432;
+}
+
+/* Backs */
+.bg-table {
+    background: #F4F7F8 !important;
+}
+
+.bg-gray-lts {
+    background-color: #E4E9F1;
+}
+
+.bg-primary-light {
+    background-color: #f7f7fe;
+}
+
+.bg-danger-light {
+    background-color: #FFD1DA;
+}
+
+.bg-light-blue {
+    background: #F6F7FB;
+}
+
+.bg-h-blue {
+    background: #66A9F8;
+}
+
+.bg-carmin {
+    background-color: #D73564;
+}
+
+.bg-h-magenta {
+    background: #F26FB2;
+}
+
+.bg-h-purple {
+    background: #8D84E8;
+}
+
+.bg-h-green {
+    background: #68C699;
+}
+
+.bg-blue-200 {
+    background: #BFDBFE;
+}
+
+.bg-blue-50 {
+    background: #EFF6FF;
+}
+
+.bg-h-light-gray {
+    background: #D0D5DD;
+}
+
+/* Textos */
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-h-blue {
+    color: #66A9F8;
+}
+
+.text-carmin {
+    color: #D73564;
+}
+
+.text-h-secondary {
+    color: #B4BFD2;
+}
+
+.text-h-light-gray {
+    color: #D0D5DD;
+}
+
+.text-pink {
+    color: #DAA6AF;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-dark {
+    color: #343633;
+}
+
+.text-dark-gray {
+    color: #707070;
+}
+
+.text-carmin {
+    color: #D73564;
+}
+
+/* backs op */
+
+.bg-pink-op-16 {
+    background: rgba(218, 166, 175, 0.16);
+}
+
+.bg-h-light-gray-op {
+    background: rgba(208, 213, 221, 0.1);
+}
+
+.bg-primary-op {
+    background: rgba(16, 113, 229, 0.1);
+}
+
+.bg-blue-op {
+    background: rgba(102, 169, 248, 0.1);
+}
+
+.bg-success-op {
+    background: rgba(40, 167, 69, 0.1);
+}
+
+.bg-danger-op {
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.bg-warning-op {
+    background: rgba(252, 148, 50, 0.1);
+}
+
+.bg-h-blue-op {
+    background: rgba(16, 113, 229, 0.1);
+}
+
+.bg-black-op {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.bg-dark-op {
+    background: rgba(52, 54, 51, 0.2);
+}
+
+.bg-dark-gray-op {
+    background: rgba(112, 112, 112, 0.2);
+}

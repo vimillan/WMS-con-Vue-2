@@ -1,0 +1,45 @@
+.modal {
+    animation-name: modalPopUp;
+    animation-duration: 180ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes modalPopUp {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.pading-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+@media (min-width: 992px) {
+    .modal-md {
+        min-width: 650px;
+    }
+
+    .modal-slg {
+        min-width: 900px;
+    }
+
+    .modal-smd {
+        max-width: 400px;
+    }
+
+    .pading-content {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+}
+
+.modal-scroll {
+    max-height: 500px !important;
+}

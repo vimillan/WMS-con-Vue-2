@@ -1,0 +1,39 @@
+html,
+body {
+    font-family: "Poppins" !important;
+    margin: 0px;
+    padding: 0px;
+    background: #F6F7FB;
+    font-size: 14px;
+    min-height: 100vh;
+}
+
+* {
+    font-family: "Poppins" !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 6.5px;
+    display: block;
+    background: rgb(0 0 0 / 1%);
+    border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(0 0 0 / 1%);
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #aabaca;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #aabaca;
+    border-radius: 5px;
+}
